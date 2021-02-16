@@ -1,9 +1,12 @@
 import React from "react";
-import "./Navbar.css";
-import PersonIcon from "@material-ui/icons/Person";
-import VisibilityIcon from "@material-ui/icons/Visibility";
+
 import NavigationLink from "./NavigationLink";
+
 import GitHubIcon from "@material-ui/icons/GitHub";
+import VisibilityIcon from "@material-ui/icons/Visibility";
+import PersonIcon from "@material-ui/icons/Person";
+
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -13,6 +16,7 @@ const Navbar = () => {
         <NavigationLink icon={<PersonIcon />} />
         <NavigationLink icon={<PersonIcon />} />
         <NavigationLink icon={<PersonIcon />} />
+        <div className="space" />
         <GitHubIcon />
       </div>
     </div>

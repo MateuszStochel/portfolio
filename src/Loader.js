@@ -17,18 +17,18 @@ const Loader = ({ loading }) => {
       }, 2000);
     }
     if (loading) {
-      refWrapper.current.classList.remove("loader__wrapper--animateOut");
       refWrapper.current.classList.add("loader__wrapper--animate");
-
-      refContent.current.classList.remove("loader__content--animateOut");
       refContent.current.classList.add("loader__content--animate");
+
+      refWrapper.current.classList.remove("loader__wrapper--animateOut");
+      refContent.current.classList.remove("loader__content--animateOut");
     }
     if (!initial && !loading) {
-      refWrapper.current.classList.remove("loader__wrapper--animate");
       refWrapper.current.classList.add("loader__wrapper--animateOut");
-
-      refContent.current.classList.remove("loader__content--animate");
       refContent.current.classList.add("loader__content--animateOut");
+
+      refWrapper.current.classList.remove("loader__wrapper--animate");
+      refContent.current.classList.remove("loader__content--animate");
     }
   }, [loading]);
 
