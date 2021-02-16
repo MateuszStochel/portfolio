@@ -1,0 +1,22 @@
+#logo {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 600px;
+}
+
+#logo path:nth-child(odd) {
+  stroke-dasharray: 444.5;
+  stroke-dashoffset: 444.5;
+  animation: line-anim 4s ease forwards 3s;
+}
+#logo path:nth-child(even) {
+  stroke-dasharray: 444.5;
+  stroke-dashoffset: 444.5;
+  animation: line-anim 3s ease forwards 3s;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
