@@ -1,9 +1,9 @@
 .navbar {
   position: absolute;
   background-color: rgb(36, 36, 36);
-  border-right: 2px solid white;
+  border-right: 2px solid rgb(255, 255, 255);
   height: 100vh;
-  width: 60px;
+  width: 80px;
   z-index: 233;
   display: flex;
   flex-direction: column;
@@ -20,11 +20,13 @@
 }
 
 svg {
-  color: white;
+  color: rgb(146, 142, 142);
   font-size: 35px !important;
 }
-
-a {
+.navbar path {
+  stroke: rgb(146, 142, 142);
+}
+span {
   margin-top: 50px;
   display: flex;
   z-index: 222;
@@ -32,7 +34,7 @@ a {
   margin-left: 145px;
 }
 
-a:hover svg {
+span:hover svg {
   filter: blur(1px);
 }
 .arrow {

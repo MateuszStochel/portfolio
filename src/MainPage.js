@@ -2,10 +2,8 @@ import React from "react";
 
 import MainPageSVG from "./MainPageSVG";
 
-import react from "./img/iconfinder_React.js_logo_1174949.png";
-
-import js from "./img/iconfinder_nodejs-512_339733.png";
 import "./MainPage.css";
+import InnerContainer from "./wrapper/InnerContainer";
 
 const MainPage = () => {
   const spanTexts = [
@@ -18,27 +16,41 @@ const MainPage = () => {
 
   return (
     <div className="mainpage">
-      <MainPageSVG />
-      <div className="mainpage__error-types">
-        <p>400 Bad Request</p>
-        <p>401 Unauthorized</p>
-        <p>403 Forbidden</p>
-        <p>404 Not Found</p>
-      </div>
-      <div className="main-page__image-wrapper">
-        <img className="main-page__image-js" src={js} alt="js" />
-        <img className="main-page__image-react" src={react} alt="react" />
-      </div>
-      <div className="mainpage__text-wrapper">
-        {spanTexts.map((text, i) => (
-          <p
-            className={`mainpage__text-animation mainpage__text-animation--${i}`}
-            key={i}
-          >
-            {text.text}
+      <InnerContainer>
+        <MainPageSVG />
+        <div className="mainpage__error-types">
+          <p>400 Bad Request</p>
+          <p>401 Unauthorized</p>
+          <p>403 Forbidden</p>
+          <p>404 Not Found</p>
+          <p>
+            Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas dsadasdas
+            dsadasdas .Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas
+            dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas dasdasd
+            asdasdas dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas
+            dasdasd asdasdas dsadasdas dsadasdas
           </p>
-        ))}
-      </div>
+          <p>
+            Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas dsadasdas
+            dsadasdas .Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas
+            dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas dasdasd
+            asdasdas dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas
+            dasdasd asdasdas dsadasdas dsadasdas
+          </p>
+        </div>
+
+        <div className="loaderss" />
+        <div className="mainpage__text-wrapper">
+          {spanTexts.map((text, i) => (
+            <p
+              className={`mainpage__text-animation mainpage__text-animation--${i}`}
+              key={i}
+            >
+              {text.text}
+            </p>
+          ))}
+        </div>
+      </InnerContainer>
     </div>
   );
 };

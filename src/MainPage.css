@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: rgb(36, 36, 36);
   font-family: "Truculenta", sans-serif;
+  overflow: hidden;
 }
 
 .mainpage__error-types p:nth-child(1) {
@@ -13,6 +14,7 @@
   left: 80%;
   font-size: 25px;
   animation: fontSize 5s 1s;
+  z-index: 20;
 }
 .mainpage__error-types p:nth-child(2) {
   position: absolute;
@@ -21,6 +23,7 @@
   top: 30%;
   left: 65%;
   font-size: 25px;
+  z-index: 20;
   animation: fontSize 5s 1s;
 }
 .mainpage__error-types p:nth-child(3) {
@@ -31,7 +34,9 @@
   left: 80%;
   font-size: 25px;
   animation: fontSize 5s 1s;
+  z-index: 20;
 }
+
 .mainpage__error-types p:nth-child(4) {
   position: absolute;
   background-color: rgb(36, 36, 36);
@@ -40,12 +45,64 @@
   left: 20%;
   font-size: 25px;
   animation: fontSize 5s 1s;
+  z-index: 20;
 }
 
+.mainpage__error-types p:nth-child(5) {
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  color: rgba(250, 250, 250, 0.05);
+  transform: rotate(-50deg);
+  top: 30%;
+
+  left: 10%;
+  font-size: 25px;
+
+  width: 30%;
+}
+.mainpage__error-types p:nth-child(6) {
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  color: rgba(250, 250, 250, 0.05);
+  transform: rotate(30deg);
+  top: 40%;
+
+  left: 50%;
+  font-size: 25px;
+
+  width: 30%;
+}
 .main-page__image-wrapper {
   position: absolute;
   top: 55%;
   left: 20%;
+}
+.innerContainer--loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  transform: translateX(0);
+  height: 100vh;
+  opacity: 0;
+  animation: scaleSection 0.4s 2s ease forwards;
+  animation: scaleSectionOut 0.8s ease forwards;
+}
+
+@keyframes scaleSectionOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+    rotate: 0;
+  }
+
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 .main-page__image-react {
@@ -58,8 +115,16 @@
 }
 .main-page__image-js {
   opacity: 0.5;
+  animation: showIcon 3s;
 }
-
+@keyframes showIcon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .mainpage__text-wrapper {
   position: absolute;
   top: 55%;

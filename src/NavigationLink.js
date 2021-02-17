@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "./Navbar.css";
 
-const NavigationLink = ({ icon, pathname }) => {
+const NavigationLink = ({ icon, pathname, loading }) => {
   return (
-    <Link to={pathname}>
+    <span to={pathname} onClick={loading}>
       {icon}
       <svg
         className="arrow"
@@ -66,7 +66,7 @@ const NavigationLink = ({ icon, pathname }) => {
           mask="url(#path-2-outside-1)"
         />
       </svg>
-    </Link>
+    </span>
   );
 };
 
