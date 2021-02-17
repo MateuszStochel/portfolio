@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   background-color: rgb(36, 36, 36);
   border-right: 2px solid rgb(255, 255, 255);
   height: 100vh;
@@ -8,13 +8,11 @@
   display: flex;
   flex-direction: column;
 }
-.space {
-  height: 100%;
-}
 
 .navbar__links--wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -26,34 +24,14 @@ svg {
 .navbar path {
   stroke: rgb(146, 142, 142);
 }
-span {
-  margin-top: 50px;
-  display: flex;
-  z-index: 222;
-  align-items: center;
-  margin-left: 145px;
-}
 
 span:hover svg {
   filter: blur(1px);
 }
-.arrow {
-  margin-left: 20px;
-  width: 120px;
-  height: 70px;
-  z-index: 300;
-  transform: translateX(-500%) rotate(-20deg);
-  animation: animation 2s 3s forwards;
-}
 
-.navbar p {
-  transform: rotate(10deg);
-  margin-top: 20px;
-  color: black;
-  font-size: 20px;
-}
 .MuiSvgIcon-root:nth-last-child(1) {
-  margin-bottom: 40px;
+  margin-top: 400px;
+  font-size: 20px !important;
 }
 
 @keyframes animation {
@@ -64,4 +42,26 @@ span:hover svg {
     transform: translateX(0);
     transform: rotate(-5deg);
   }
+}
+
+.hi {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+.hi svg {
+  position: absolute;
+  fill: black;
+  filter: blur(1px);
+  font-size: 40px;
+}
+
+.hi div {
+  position: absolute;
+  color: white;
+  font-size: 16px;
 }
