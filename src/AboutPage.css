@@ -3,41 +3,137 @@
   height: 100vh;
   width: 100%;
   background-color: rgb(36, 36, 36);
-  display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 
-.gym {
-  width: 300px;
-  height: 500px;
-  position: absolute;
-  bottom: 0;
-  object-fit: cover;
-  left: -400px;
-}
-
-.gym2 {
-  width: 400px;
-  height: 600px;
-  position: absolute;
-  bottom: 0;
-
-  right: -400px;
-}
-
 .wrapper {
-  letter-spacing: 1px;
-  position: relative;
-  padding: 40px;
   color: white;
-  width: 600px;
-  border-radius: 20px;
-  display: flex;
-  background-color: white;
+  position: absolute;
+
+  top: 50%;
+  left: 10%;
+}
+.wrapper h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.wrapper p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
-.wrapper p {
-  font-size: 20px;
-  color: black;
+.hii {
+  position: absolute;
+  left: 30%;
+  height: 800px;
+
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+#heyy path:nth-child(odd) {
+  stroke-dasharray: 444.5;
+  stroke-dashoffset: 444.5;
+  animation: line-anim 4s ease forwards 3s;
+}
+#heyy path:nth-child(even) {
+  stroke-dasharray: 444.5;
+  stroke-dashoffset: 444.5;
+  animation: line-anim 3s ease forwards 3s;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aboutpage__images--wrapper {
+  cursor: pointer;
+  width: 300px;
+  height: 410px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border-radius: 20px;
+}
+
+.front,
+.back {
+  width: 300px;
+  height: 410px;
+  border-radius: 20px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.6s linear;
+}
+
+.front img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.front {
+  transform: perspective(600px) rotateY(0deg);
+  animation: rotateImage 2s 2s;
+}
+.back {
+  transform: perspective(600px) rotateY(180deg);
+  animation: rotateImage2 2s 2s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.back-content {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.aboutpage__images--wrapper:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+  z-index: 20;
+}
+.aboutpage__images--wrapper:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+  z-index: 20;
+}
+
+.aboutpage__images--wrapper:nth-child(4) {
+  margin-left: 310px;
+}
+.aboutpage__images--wrapper:nth-child(5) {
+  margin-left: 150px;
+  margin-top: 300px;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotateImage2 {
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
 }

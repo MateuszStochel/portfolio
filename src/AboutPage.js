@@ -1,20 +1,69 @@
 import React from "react";
 import "./AboutPage.css";
-
+import "./MainPageSVG";
 import img from "./img/samuel-girven-VJ2s0c20qCo-unsplash.jpg";
+import img2 from "./img/victor-freitas-Yuv-iwByVRQ-unsplash.jpg";
+import AboutPageSvg from "./AboutPageSvg";
 
 const AboutPage = () => {
   return (
     <div className="aboutpage">
+      <AboutPageSvg />
       <div className="wrapper">
-        <p>
-          Programming has been my passion for over 6 years. Over time, I became
-          interested in the front-end and related technologies, including React,
-          which for me is currently in the first place. It pays a lot of
-          attention to the aesthetics and operation of the projects I perform. I
-          often design templates by myself. I worked with many languages and
-          technologies, but the most I liked javascript and its ecosystem.
-        </p>
+        <h1>My Passion</h1>
+        <p>Programming</p>
+        <p>Programming</p>
+        <p>Programming</p>
+      </div>
+      <div className="aboutpage__images--wrapper">
+        <div class="front">
+          <img src={img2} alt="gym" />
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <h2>DarkCode</h2>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              voluptate aut doloribus molestias ratione temporibus officia
+              distinctio excepturi animi dolores non reprehenderit illum
+              officiis impedit, id nihil, odit, aperiam assumenda?
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="aboutpage__images--wrapper">
+        <div className="background" />
+        <div class="front">
+          <img src={img} alt="gym" />
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <h2>DarkCode</h2>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              voluptate aut doloribus molestias ratione temporibus officia
+              distinctio excepturi animi dolores non reprehenderit illum
+              officiis impedit, id nihil, odit, aperiam assumenda?
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="aboutpage__images--wrapper">
+        <div className="background" />
+        <div class="front">
+          <img src={img} alt="gym" />
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <h2>DarkCode</h2>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              voluptate aut doloribus molestias ratione temporibus officia
+              distinctio excepturi animi dolores non reprehenderit illum
+              officiis impedit, id nihil, odit, aperiam assumenda?
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

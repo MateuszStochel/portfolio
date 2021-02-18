@@ -1,25 +1,46 @@
 #logo {
   position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 600px;
-  z-index: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 3000;
 }
+
 #logo path {
   stroke: rgb(146, 142, 142);
 }
 #logo path:nth-child(odd) {
   stroke-dasharray: 444.5;
   stroke-dashoffset: 444.5;
-  animation: line-anim 4s ease forwards 3s;
+  animation: line-anime 4s ease forwards 3s;
 }
 #logo path:nth-child(even) {
   stroke-dasharray: 444.5;
   stroke-dashoffset: 444.5;
-  animation: line-anim 3s ease forwards 3s;
+  animation: line-anime 3s ease forwards 3s;
 }
-@keyframes line-anim {
+@keyframes line-anime {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  #logo {
+    width: 400px;
+  }
+}
+
+@media (min-width: 700px) {
+  #logo {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #logo {
+    width: 600px;
+    top: 15%;
+    left: 40%;
   }
 }

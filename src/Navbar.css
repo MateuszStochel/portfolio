@@ -5,8 +5,10 @@
   height: 100vh;
   width: 80px;
   z-index: 233;
+
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .navbar__links--wrapper {
@@ -64,4 +66,10 @@ span:hover svg {
   position: absolute;
   color: white;
   font-size: 16px;
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    display: flex;
+  }
 }

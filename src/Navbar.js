@@ -35,10 +35,16 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar__links--wrapper">
         <NavigationLink
-          name="about"
+          name="Main"
           loading={setLoading}
           icon={<VisibilityIcon />}
+          pathname="/"
+        />
+        <NavigationLink
+          name="about"
           pathname="/about"
+          loading={setLoading}
+          icon={<PersonIcon />}
         />
         <NavigationLink
           name="projects"
@@ -49,12 +55,6 @@ const Navbar = () => {
         <NavigationLink
           name="contact"
           pathname="/contact"
-          loading={setLoading}
-          icon={<PersonIcon />}
-        />
-        <NavigationLink
-          name="about"
-          pathname="/about"
           loading={setLoading}
           icon={<PersonIcon />}
         />

@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./MainPageSVG.css";
 
 const MainPageSVG = () => {

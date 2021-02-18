@@ -7,11 +7,19 @@ import InnerContainer from "./wrapper/InnerContainer";
 
 const MainPage = () => {
   const spanTexts = [
-    { text: "<html>" },
-    { text: "</head>" },
-    { text: "<title>Hello World!</title>" },
-    { text: "</head>" },
-    { text: "</html>" },
+    "<html>",
+    "</head>",
+    "<title>Hello World!</title>",
+    "</head>",
+    "</html>",
+  ];
+  const errorsType = [
+    "400 Bad Request",
+    "401 Unauthorized",
+    "403 Forbidden",
+    "404 Not Found",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo asperiores vel nemo? Ducimus, rerum!",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo asperiores vel nemo? Ducimus, rerum!",
   ];
 
   return (
@@ -19,34 +27,17 @@ const MainPage = () => {
       <InnerContainer>
         <MainPageSVG />
         <div className="mainpage__error-types">
-          <p>400 Bad Request</p>
-          <p>401 Unauthorized</p>
-          <p>403 Forbidden</p>
-          <p>404 Not Found</p>
-          <p>
-            Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas dsadasdas
-            dsadasdas .Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas
-            dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas dasdasd
-            asdasdas dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas
-            dasdasd asdasdas dsadasdas dsadasdas
-          </p>
-          <p>
-            Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas dsadasdas
-            dsadasdas .Error dasda aadsas adsasdasd asdasdas dasdasd asdasdas
-            dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas dasdasd
-            asdasdas dsadasdas dsadasdas Error dasda aadsas adsasdasd asdasdas
-            dasdasd asdasdas dsadasdas dsadasdas
-          </p>
+          {errorsType.map((error, i) => (
+            <p key={i}>{error}</p>
+          ))}
         </div>
-
-        <div className="loaderss" />
         <div className="mainpage__text-wrapper">
           {spanTexts.map((text, i) => (
             <p
               className={`mainpage__text-animation mainpage__text-animation--${i}`}
               key={i}
             >
-              {text.text}
+              {text}
             </p>
           ))}
         </div>
