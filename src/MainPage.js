@@ -18,8 +18,6 @@ const MainPage = () => {
     "401 Unauthorized",
     "403 Forbidden",
     "404 Not Found",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo asperiores vel nemo? Ducimus, rerum!",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo asperiores vel nemo? Ducimus, rerum!",
   ];
 
   return (

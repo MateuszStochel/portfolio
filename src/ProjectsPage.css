@@ -1,0 +1,106 @@
+.projectspage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(36, 36, 36);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.projectspage__header {
+  font-size: 50px;
+  margin-top: 20px;
+  font-size: 60px;
+  background: -webkit-linear-gradient(#fa9601, rgb(36, 36, 36));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.projectspage__technologies-wrapper {
+  width: 60%;
+  text-align: center;
+}
+
+.projectspage__technologies-wrapper li {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.projectspage__technologies-wrapper li p {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.projectspage__technologies-wrapper li:nth-child(odd) {
+  text-align: left;
+  color: #fa9601;
+  transform: translateX(-300%);
+  animation: animations 2s 1.5s forwards;
+}
+
+.projectspage__technologies-wrapper li:nth-child(even) {
+  text-align: right;
+  color: white;
+  transform: translateX(300%);
+  animation: animation 2s 2s forwards;
+}
+.projectspage__technologies-wrapper li:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.projectspage__technologies-wrapper li:nth-child(6) {
+  animation-delay: 2.8s;
+}
+.projectspage__technologies-wrapper li:nth-child(1) {
+  animation-delay: 2.2s;
+}
+.projectspage__technologies-wrapper li:nth-child(5) {
+  animation-delay: 2.6s;
+}
+
+.line-technology {
+  height: 2px;
+  width: 100%;
+}
+.projectspage__technologies-wrapper li:nth-child(even) .line-technology {
+  background: transparent -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0),
+      #f7f7f6
+    ) repeat scroll 0 0;
+}
+
+.projectspage__technologies-wrapper li:nth-child(odd) .line-technology {
+  background: transparent -webkit-linear-gradient(
+      45deg,
+      #fa9601,
+      rgba(0, 0, 255, 0)
+    ) repeat scroll 0 0;
+}
+
+@keyframes animation {
+  0% {
+    transform: translateX(300%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  75% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animations {
+  0% {
+    transform: translateX(-300%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

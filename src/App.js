@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router";
+import { Route, Router, Switch } from "react-router";
 
 import Loader from "./Loader";
 import MainPage from "./MainPage";
 import Navbar from "./Navbar";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "./Backdrop";
+import ProjectsPage from "./ProjectsPage";
 
 import "./App.css";
 import AboutPage from "./AboutPage";
@@ -35,6 +36,7 @@ function App() {
 
       <Switch>
         <Route path="/" exact component={MainPage} />
+        <Route path="/projects" component={ProjectsPage} />
         <Route path="/about" component={AboutPage} />
       </Switch>
     </>

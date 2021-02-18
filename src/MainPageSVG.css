@@ -3,11 +3,11 @@
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
-  z-index: 3000;
+  z-index: 500;
 }
 
 #logo path {
-  stroke: rgb(146, 142, 142);
+  stroke: #cc8d2e;
 }
 #logo path:nth-child(odd) {
   stroke-dasharray: 444.5;

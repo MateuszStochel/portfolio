@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   background-color: rgb(36, 36, 36);
-  border-right: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid #fa9601;
   height: 100vh;
   width: 80px;
   z-index: 233;
@@ -19,16 +19,8 @@
   height: 100%;
 }
 
-svg {
-  color: rgb(146, 142, 142);
-  font-size: 35px !important;
-}
 .navbar path {
-  stroke: rgb(146, 142, 142);
-}
-
-span:hover svg {
-  filter: blur(1px);
+  stroke: #fa9601;
 }
 
 .MuiSvgIcon-root:nth-last-child(1) {
@@ -58,7 +50,6 @@ span:hover svg {
 .hi svg {
   position: absolute;
   fill: black;
-  filter: blur(1px);
   font-size: 40px;
 }
 

@@ -15,7 +15,7 @@
 .mainpage__error-types p:nth-child(3),
 .mainpage__error-types p:nth-child(4) {
   display: block;
-  color: rgba(250, 250, 250, 0.5);
+  color: rgba(180, 0, 0, 0.5);
   animation: fontSize 5s 1s;
 }
 
@@ -45,12 +45,15 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
+  color: #865c1d;
 }
 
 .mainpage__text-animation {
   white-space: nowrap;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.5);
+  background: -webkit-linear-gradient(#fa9601, rgb(110, 103, 103));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   border-right: 2px solid white;
   font-family: "Brush Script MT Italic";
   font-size: 20px;
