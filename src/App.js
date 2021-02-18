@@ -1,18 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router";
 
 import Loader from "./Loader";
 import MainPage from "./MainPage";
 import Navbar from "./Navbar";
+import SideDrawer from "./SideDrawer";
+import Backdrop from "./Backdrop";
 
 import "./App.css";
 import AboutPage from "./AboutPage";
+import DrawerToggleButton from "./DrawerToggleButton";
 
 function App() {
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+
+  const drawerToggleClickHandler = () => {
+    setSideDrawerOpen(!sideDrawerOpen);
+  };
+
+  const backdropClickHandler = () => {
+    setSideDrawerOpen(false);
+  };
+
   return (
     <>
+      <DrawerToggleButton drawerClickHandler={drawerToggleClickHandler} />
       <Navbar />
+      <SideDrawer
+        show={sideDrawerOpen}
+        onShow={setSideDrawerOpen}
+        className={sideDrawerOpen ? "side__drawer open" : "side__drawer"}
+      />
       <Loader />
+
       <Switch>
         <Route path="/" exact component={MainPage} />
         <Route path="/about" component={AboutPage} />

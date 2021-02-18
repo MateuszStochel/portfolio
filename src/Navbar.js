@@ -13,8 +13,9 @@ import {
   asyncActionStart,
 } from "./store/action/asyncAction";
 import { useHistory } from "react-router";
+import DrawerToggleButton from "./DrawerToggleButton";
 
-const Navbar = () => {
+const Navbar = ({ drawerClickHandler }) => {
   const { loading } = useSelector((state) => state.async);
   const history = useHistory();
   const dispatch = useDispatch();

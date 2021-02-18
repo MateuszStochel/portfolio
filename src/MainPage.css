@@ -225,6 +225,7 @@
   .mainpage__text-animation {
     font-size: 35px;
   }
+
   @keyframes animationCodeLong {
     0% {
       width: 0;
