@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, useLocation, useRouteMatch } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import CloseIcon from "@material-ui/icons/Close";
 import "./SideDrawer.css";
 import { useDispatch } from "react-redux";
@@ -14,7 +14,7 @@ const SideDrawer = ({ show, onShow, ...props }) => {
   let location = useLocation();
 
   const changeUrl = (url) => {
-    const pathName = location.pathname.slice(1);
+    const pathName = location.pathname;
     onShow(!show);
     if (pathName === url) return;
     dispatch(asyncActionStart());
@@ -29,11 +29,11 @@ const SideDrawer = ({ show, onShow, ...props }) => {
         <CloseIcon onClick={() => onShow(!show)} />
       </div>
       <ul className="sidedrawer__links__wrapper">
-        <li onClick={() => changeUrl("about")}>Main</li>
-        <li onClick={() => changeUrl("about")}>About</li>
-        <li onClick={() => changeUrl("contact")}>Projects</li>
-        <li onClick={() => changeUrl("contact")}>Skills</li>
-        <li onClick={() => changeUrl("contact")}>Contact</li>
+        <li onClick={() => changeUrl("/")}>Main</li>
+        <li onClick={() => changeUrl("/about")}>About</li>
+        <li onClick={() => changeUrl("/contact")}>Projects</li>
+        <li onClick={() => changeUrl("/contact")}>Skills</li>
+        <li onClick={() => changeUrl("/contact")}>Contact</li>
       </ul>
     </nav>
   );

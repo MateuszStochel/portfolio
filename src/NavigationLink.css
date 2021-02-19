@@ -10,9 +10,10 @@
   fill: orange;
 }
 
-.navigationlink:hover div {
+.navigationlink:hover p {
   color: orange;
 }
+
 .navigationlink svg {
   font-size: 30px;
 }
@@ -21,7 +22,7 @@
   margin-bottom: 100px;
 }
 
-.navigationlink div {
+.navigationlink p {
   color: white;
   text-transform: uppercase;
   z-index: 20;

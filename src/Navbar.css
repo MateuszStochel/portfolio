@@ -57,9 +57,7 @@
   height: 2px;
   position: absolute;
   bottom: 40%;
-
   left: 20px;
-
   transform: rotate(90deg);
   background-color: white;
 }
