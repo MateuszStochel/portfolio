@@ -48,6 +48,8 @@
 .sidedrawer__links__wrapper li {
   margin: 1rem 0;
   color: white;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 .sidedrawer__links__wrapper li:nth-last-child(2) {
   border-bottom: 1px solid white;

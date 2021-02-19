@@ -1,21 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useHistory, useLocation } from "react-router";
 
 import NavigationLink from "./NavigationLink";
-
-import GitHubIcon from "@material-ui/icons/GitHub";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import PersonIcon from "@material-ui/icons/Person";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
-import AirplayIcon from "@material-ui/icons/Airplay";
-import ContactMailIcon from "@material-ui/icons/ContactMail";
-
-import "./Navbar.css";
-import { useDispatch, useSelector } from "react-redux";
 import {
   asyncActionFinish,
   asyncActionStart,
 } from "./store/action/asyncAction";
-import { useHistory, useLocation } from "react-router";
+
+import GitHubIcon from "@material-ui/icons/GitHub";
+import PersonIcon from "@material-ui/icons/Person";
+import SyncAltIcon from "@material-ui/icons/SyncAlt";
+import AirplayIcon from "@material-ui/icons/Airplay";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+import DomainIcon from "@material-ui/icons/Domain";
+
+import "./Navbar.css";
 
 const Navbar = () => {
   let location = useLocation();
@@ -39,7 +39,7 @@ const Navbar = () => {
         <NavigationLink
           name="Main"
           loading={setLoading}
-          icon={<VisibilityIcon />}
+          icon={<DomainIcon />}
           icon2={<SyncAltIcon />}
           pathname="/"
         />

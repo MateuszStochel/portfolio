@@ -18,6 +18,7 @@
   background: -webkit-linear-gradient(#fa9601, rgb(36, 36, 36));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 .projectspage__technologies-wrapper {
   width: 60%;
@@ -80,7 +81,8 @@
       rgba(0, 0, 255, 0)
     ) repeat scroll 0 0;
 }
-
+.projectspage__header span {
+}
 @keyframes animation {
   0% {
     transform: translateX(300%);

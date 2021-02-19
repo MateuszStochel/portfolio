@@ -3,9 +3,16 @@
   flex-direction: column-reverse;
   cursor: pointer;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+.navigationlink:hover path {
+  stroke: orange;
+  fill: orange;
 }
 
+.navigationlink:hover div {
+  color: orange;
+}
 .navigationlink svg {
   font-size: 30px;
 }
@@ -20,4 +27,5 @@
   z-index: 20;
   font-size: 13px;
   font-weight: bold;
+  color: white;
 }
