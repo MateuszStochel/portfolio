@@ -2,68 +2,31 @@ import React from "react";
 import "./AboutPage.css";
 import "./MainPageSVG";
 import img from "./img/samuel-girven-VJ2s0c20qCo-unsplash.jpg";
-import img2 from "./img/victor-freitas-Yuv-iwByVRQ-unsplash.jpg";
+import img2 from "./img/alessandro-sacchi-NUFnfYd09iI-unsplash.jpg";
+import img3 from "./img/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg";
 import AboutPageSvg from "./AboutPageSvg";
 
 const AboutPage = () => {
   return (
     <div className="aboutpage">
-      <AboutPageSvg />
-      <div className="wrapper">
-        <h1>My Passion</h1>
-        <p>Programming</p>
-        <p>Programming</p>
-        <p>Programming</p>
+      <div className="aboutpage__divider"></div>
+
+      <div className="lorem">
+        <div className="border aboutpage__border-first" />
+        <div className="border aboutpage__border-second" />
+        <p className="span">Programming</p> consectetur adipisicing elit.
+        Deserunt, sit. Harum natus placeat nam sit. Odio nesciunt ipsum
+        nostrumnam sit. Odio nesciunt ipsum nostrum nam sit. Odio nesciunt ipsum
+        nostrum nam sit. Odio nesciunt ipsum nostrum
+        <div className="border aboutpage__border-third" />
       </div>
-      <div className="aboutpage__images--wrapper">
-        <div class="front">
-          <img src={img2} alt="gym" />
-        </div>
-        <div class="back">
-          <div class="back-content middle">
-            <h2>DarkCode</h2>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              voluptate aut doloribus molestias ratione temporibus officia
-              distinctio excepturi animi dolores non reprehenderit illum
-              officiis impedit, id nihil, odit, aperiam assumenda?
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="aboutpage__images--wrapper">
-        <div className="background" />
-        <div class="front">
-          <img src={img} alt="gym" />
-        </div>
-        <div class="back">
-          <div class="back-content middle">
-            <h2>DarkCode</h2>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              voluptate aut doloribus molestias ratione temporibus officia
-              distinctio excepturi animi dolores non reprehenderit illum
-              officiis impedit, id nihil, odit, aperiam assumenda?
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="aboutpage__images--wrapper">
-        <div className="background" />
-        <div class="front">
-          <img src={img} alt="gym" />
-        </div>
-        <div class="back">
-          <div class="back-content middle">
-            <h2>DarkCode</h2>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-              voluptate aut doloribus molestias ratione temporibus officia
-              distinctio excepturi animi dolores non reprehenderit illum
-              officiis impedit, id nihil, odit, aperiam assumenda?
-            </span>
-          </div>
-        </div>
+      <div className="lorem2">
+        consectetur adipisicing elit. Deserunt, sit. Harum natus placeat nam
+        sit. Odio nesciunt ipsum nostrum voluptates magni cumque iste. Possimus
+        magni, architecto quisquam porro maxime libero.
+        <p className="span">Programming</p>
+        <div className="border aboutpage__border-second" />
+        <div className="border aboutpage__border-third" />
       </div>
     </div>
   );

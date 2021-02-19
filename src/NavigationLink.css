@@ -1,0 +1,23 @@
+.navigationlink {
+  display: flex;
+  flex-direction: column-reverse;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.navigationlink svg {
+  font-size: 30px;
+}
+
+.navigationlink svg:nth-child(2) {
+  margin-bottom: 100px;
+}
+
+.navigationlink div {
+  color: white;
+  text-transform: uppercase;
+  z-index: 20;
+  font-size: 13px;
+  font-weight: bold;
+}

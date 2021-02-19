@@ -2,15 +2,19 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(36, 36, 36);
+  background-image: linear-gradient(
+    135deg,
+    rgb(7, 6, 4) 0%,
+    rgb(49, 47, 47) 50%,
+    rgb(7, 6, 4) 89%
+  );
   min-height: 100vh;
   overflow: hidden;
 }
 
 .projectspage__header {
+  margin-top: 40px;
   font-size: 50px;
-  margin-top: 20px;
-  font-size: 60px;
   background: -webkit-linear-gradient(#fa9601, rgb(36, 36, 36));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -27,7 +31,7 @@
 
 .projectspage__technologies-wrapper li p {
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .projectspage__technologies-wrapper li:nth-child(odd) {
   text-align: left;
@@ -42,23 +46,25 @@
   transform: translateX(300%);
   animation: animation 2s 2s forwards;
 }
-.projectspage__technologies-wrapper li:nth-child(2) {
-  animation-delay: 2.5s;
-}
-.projectspage__technologies-wrapper li:nth-child(6) {
-  animation-delay: 2.8s;
-}
 .projectspage__technologies-wrapper li:nth-child(1) {
   animation-delay: 2.2s;
 }
+.projectspage__technologies-wrapper li:nth-child(2) {
+  animation-delay: 2.5s;
+}
 .projectspage__technologies-wrapper li:nth-child(5) {
   animation-delay: 2.6s;
+}
+.projectspage__technologies-wrapper li:nth-child(6) {
+  animation-delay: 2.8s;
+  margin-bottom: 50px;
 }
 
 .line-technology {
   height: 2px;
   width: 100%;
 }
+
 .projectspage__technologies-wrapper li:nth-child(even) .line-technology {
   background: transparent -webkit-linear-gradient(
       45deg,
@@ -102,5 +108,32 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media (min-width: 700px) {
+  .projectspage__header {
+    font-size: 55px;
+  }
+  .projectspage__technologies-wrapper li p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .projectspage__header {
+    font-size: 60px;
+  }
+  .projectspage__technologies-wrapper li p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projectspage__header {
+    font-size: 70px;
+  }
+  .projectspage__technologies-wrapper li p {
+    font-size: 22px;
   }
 }

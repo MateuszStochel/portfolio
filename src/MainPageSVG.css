@@ -1,13 +1,14 @@
 #logo {
   position: absolute;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 320px;
   z-index: 500;
 }
 
 #logo path {
-  stroke: #cc8d2e;
+  stroke: rgba(255, 255, 255, 0.8);
 }
 #logo path:nth-child(odd) {
   stroke-dasharray: 444.5;
@@ -27,20 +28,43 @@
 
 @media (min-width: 500px) {
   #logo {
-    width: 400px;
+    width: 500px;
   }
 }
 
 @media (min-width: 700px) {
   #logo {
-    width: 500px;
+    width: 600px;
   }
 }
 
 @media (min-width: 1000px) {
   #logo {
     width: 600px;
-    top: 15%;
+    top: 5%;
+    left: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  #logo {
+    width: 700px;
+    top: 10%;
+    left: 40%;
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  #logo {
+    width: 400px;
+    top: 5%;
+    left: 34%;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  #logo {
+    width: 400px;
+    top: 0;
     left: 40%;
   }
 }

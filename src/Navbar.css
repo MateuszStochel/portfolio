@@ -1,11 +1,10 @@
 .navbar {
   position: fixed;
-  background-color: rgb(36, 36, 36);
-  border-right: 2px solid #fa9601;
+  background-color: transparent;
+  border-right: 2px solid rgb(119, 117, 117);
   height: 100vh;
   width: 80px;
   z-index: 233;
-
   display: flex;
   flex-direction: column;
   display: none;
@@ -14,18 +13,55 @@
 .navbar__links--wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .navbar path {
-  stroke: #fa9601;
+  stroke: white;
+  fill: white;
 }
 
+.space {
+  height: 100%;
+}
+.navbar__links--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.navbar-contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  transform: rotate(0);
+  width: 80px;
+  margin-bottom: 10px;
+}
+.navbar-contact p {
+  margin-bottom: 100px;
+  color: white;
+  width: 100px;
+  transform: rotate(-90deg);
+}
+
+.navbar-contact:before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  bottom: 40%;
+
+  left: 20px;
+
+  transform: rotate(90deg);
+  background-color: white;
+}
 .MuiSvgIcon-root:nth-last-child(1) {
-  margin-top: 400px;
-  font-size: 20px !important;
+  font-size: 30px !important;
 }
 
 @keyframes animation {
@@ -38,28 +74,7 @@
   }
 }
 
-.hi {
-  margin-top: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  align-items: center;
-}
-
-.hi svg {
-  position: absolute;
-  fill: black;
-  font-size: 40px;
-}
-
-.hi div {
-  position: absolute;
-  color: white;
-  font-size: 16px;
-}
-
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .navbar {
     display: flex;
   }

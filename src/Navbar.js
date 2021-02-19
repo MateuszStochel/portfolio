@@ -5,6 +5,9 @@ import NavigationLink from "./NavigationLink";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import PersonIcon from "@material-ui/icons/Person";
+import SyncAltIcon from "@material-ui/icons/SyncAlt";
+import AirplayIcon from "@material-ui/icons/Airplay";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
 
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,14 +15,17 @@ import {
   asyncActionFinish,
   asyncActionStart,
 } from "./store/action/asyncAction";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 
 const Navbar = () => {
+  let location = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
 
   const setLoading = (e) => {
+    console.log(location.pathname);
     const path = e.currentTarget.getAttribute("to");
+    if (location.pathname === path) return;
     dispatch(asyncActionStart());
     setTimeout(() => {
       dispatch(asyncActionFinish());
@@ -34,6 +40,7 @@ const Navbar = () => {
           name="Main"
           loading={setLoading}
           icon={<VisibilityIcon />}
+          icon2={<SyncAltIcon />}
           pathname="/"
         />
         <NavigationLink
@@ -46,16 +53,19 @@ const Navbar = () => {
           name="projects"
           pathname="/projects"
           loading={setLoading}
-          icon={<PersonIcon />}
+          icon={<AirplayIcon />}
         />
         <NavigationLink
           name="contact"
           pathname="/contact"
           loading={setLoading}
-          icon={<PersonIcon />}
+          icon={<ContactMailIcon />}
         />
         <div className="space" />
-        <GitHubIcon />
+        <div className="navbar-contact">
+          <p>Check me</p>
+          <GitHubIcon />
+        </div>
       </div>
     </div>
   );

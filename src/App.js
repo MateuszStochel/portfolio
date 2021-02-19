@@ -4,6 +4,7 @@ import { Route, Router, Switch } from "react-router";
 import Loader from "./Loader";
 import MainPage from "./MainPage";
 import Navbar from "./Navbar";
+import Contact from "./Contact";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "./Backdrop";
 import ProjectsPage from "./ProjectsPage";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" exact component={MainPage} />
         <Route path="/projects" component={ProjectsPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/contact" component={Contact} />
       </Switch>
     </>
   );

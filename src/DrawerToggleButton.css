@@ -1,8 +1,8 @@
 .drawerToggleButton {
   position: absolute;
   top: 5%;
-  right: 5%;
-
+  left: 5%;
+  z-index: 22222;
   border: none;
   background: transparent;
   box-sizing: border-box;
@@ -19,7 +19,6 @@
 .drawerToggleButton__line {
   width: 30px;
   height: 2px;
-
   background-color: white;
 }
 
@@ -31,7 +30,7 @@
 .drawerToggleButton__line:nth-child(2) {
   width: 25px;
 }
-@media (max-width: 699px) {
+@media (max-width: 899px) {
   .drawerToggleButton {
     display: flex;
     flex-direction: column;
