@@ -27,7 +27,10 @@ function App() {
   const backdropClickHandler = () => {
     setSideDrawerOpen(false);
   };
-
+  let backdrop;
+  if (sideDrawerOpen) {
+    backdrop = <Backdrop click={backdropClickHandler} />;
+  }
   return (
     <>
       <DrawerToggleButton drawerClickHandler={drawerToggleClickHandler} />
@@ -38,7 +41,7 @@ function App() {
         className={sideDrawerOpen ? "side__drawer open" : "side__drawer"}
       />
       <Loader />
-
+      {backdrop}
       <Switch>
         <Route path="/" exact component={MainPage} />
         <Route path="/skills" component={ProjectsPage} />
