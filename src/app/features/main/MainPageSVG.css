@@ -13,12 +13,12 @@
 #logo path:nth-child(odd) {
   stroke-dasharray: 444.5;
   stroke-dashoffset: 444.5;
-  animation: line-anime 4s ease forwards 3s;
+  animation: line-anime 4s ease forwards 2s;
 }
 #logo path:nth-child(even) {
   stroke-dasharray: 444.5;
   stroke-dashoffset: 444.5;
-  animation: line-anime 3s ease forwards 3s;
+  animation: line-anime 3s ease forwards 2s;
 }
 @keyframes line-anime {
   to {

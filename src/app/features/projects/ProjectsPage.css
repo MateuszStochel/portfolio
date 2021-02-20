@@ -13,6 +13,8 @@
   background: -webkit-linear-gradient(#fa9601, rgba(36, 36, 36, 1));
   font-size: 60px;
   margin-top: 100px;
+  width: 100%;
+  text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 100px;
@@ -82,7 +84,9 @@
   margin: 10px auto;
   cursor: pointer;
 }
-
+.button:hover {
+  background-color: black;
+}
 @media (min-width: 600px) {
   .aboutpage__text-wrapper h3 {
     font-size: 50px;
@@ -104,10 +108,118 @@
 }
 
 @media (min-width: 1000px) {
+  .aboutpage__content__title-0 {
+    transform: translateX(-3000px);
+    animation: animationss 2s 2s forwards;
+  }
+  .aboutpage__header {
+    transform: scale(0);
+    animation: animations 1s 5s forwards;
+  }
+  .aboutpage__content__image-0 {
+    transform: translateY(-3000px);
+    animation: animationsss 2s 2.5s forwards;
+  }
   .aboutpage__content {
     flex-direction: row;
   }
-  /* @keyframes animations {
+  .aboutpage__content__animation-0 p {
+    animation: animations 2s 4s forwards;
+  }
+  .aboutpage__content__animation-0 h3 {
+    animation: animations 1s 3.7s forwards;
+  }
+  .aboutpage__content__animation-0 button {
+    animation: animation 2s 4s forwards;
+  }
+  .aboutpage__content__title-1 {
+    transform: translateX(-3000px);
+    animation: animationss 2s 3s forwards;
+  }
+  .aboutpage__content__image-1 {
+    transform: translateY(3000px);
+    animation: animationssss 2s 3.5s forwards;
+  }
+  .aboutpage__content__animation-1 p {
+    animation: animations 2s 5s forwards;
+  }
+  .aboutpage__content__animation-1 h3 {
+    animation: animations 1s 4.7s forwards;
+  }
+  .aboutpage__content__animation-1 button {
+    animation: animation 2s 5s forwards;
+  }
+  .aboutpage__text-wrapper h3 {
+    font-size: 40px;
+
+    transform: scale(0);
+  }
+  .aboutpage__text-wrapper p {
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto 20px;
+    transform: scale(0);
+  }
+  .aboutpage__content h2 {
+    margin-left: 150px;
+    margin-right: 20px;
+  }
+  .button {
+    transform: translateX(-3000px);
+    height: 40px;
+    font-size: 18px;
+    width: 60%;
+  }
+  .aboutpage__content img {
+    width: 50%;
+    height: 330px;
+  }
+  .aboutpage__text-wrapper {
+    width: 30%;
+  }
+
+  @media (min-width: 1300px) {
+    .aboutpage__content h2 {
+      font-size: 40px;
+      margin-left: 150px;
+    }
+    .aboutpage__content img {
+      width: 700px;
+      height: 400px;
+    }
+    .aboutpage__content h2:after {
+      font-size: 90px;
+    }
+    .aboutpage__text-wrapper {
+      width: 330px;
+    }
+    .aboutpage__header {
+      font-size: 80px;
+    }
+    .button {
+      height: 50px;
+      font-size: 22px;
+      width: 80%;
+    }
+    .aboutpage__text-wrapper p {
+      font-size: 20px;
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .aboutpage__content h2 {
+      margin-left: 50px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .aboutpage__content h2 {
+      margin-left: 0;
+    }
+  }
+  @keyframes animations {
     0% {
       transform: scale(0);
     }
@@ -120,26 +232,22 @@
     0% {
       transform: translateX(-3000px);
     }
-    70% {
-      transform: translateX(40px);
-    }
-    80% {
-      transform: translateX(-80px);
-    }
-    87% {
-      transform: translateX(10px);
-    }
-    94% {
-      transform: translateX(-10px);
-    }
     100% {
-      transform: translate(0);
+      transform: translateX(0);
     }
   }
 
   @keyframes animationsss {
     0% {
       transform: translateY(-1000px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes animationssss {
+    0% {
+      transform: translateY(1000px);
     }
     100% {
       transform: translateY(0);
@@ -152,5 +260,5 @@
     100% {
       transform: translate(0);
     }
-  } */
+  }
 }
