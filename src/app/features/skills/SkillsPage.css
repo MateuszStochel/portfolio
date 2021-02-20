@@ -81,8 +81,7 @@
       rgba(0, 0, 255, 0)
     ) repeat scroll 0 0;
 }
-.projectspage__header span {
-}
+
 @keyframes animation {
   0% {
     transform: translateX(300%);
@@ -112,7 +111,12 @@
     transform: translateX(0);
   }
 }
-
+@media (min-width: 300px) {
+  .projectspage__header {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+}
 @media (min-width: 700px) {
   .projectspage__header {
     font-size: 55px;

@@ -8,25 +8,31 @@
   justify-content: center;
   overflow: hidden;
 }
-h1 {
+
+.aboutpage__header {
   background: -webkit-linear-gradient(#fa9601, rgba(36, 36, 36, 1));
-  font-size: 80px;
+  font-size: 60px;
+  margin-top: 100px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 100px;
+  text-transform: uppercase;
 }
 .aboutpage__content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 60px;
 }
 .aboutpage__content h2 {
-  font-size: 40px;
+  font-size: 35px;
   color: white;
+  margin-bottom: 50px;
   position: relative;
-  margin-right: 50px;
+  text-transform: uppercase;
 }
+
 .aboutpage__content h2:after {
   content: "01";
   position: absolute;
@@ -36,42 +42,115 @@ h1 {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-
-  font-size: 90px;
+  font-size: 70px;
 }
-img {
-  width: 30%;
-  height: 300px;
+
+.aboutpage__content img {
+  width: 90%;
+  height: 200px;
 }
 
 .aboutpage__text-wrapper {
-  width: 20%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
   color: white;
-  margin-left: 50px;
 }
 .aboutpage__text-wrapper h3 {
   font-size: 40px;
-  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0 40px 0;
 }
 .aboutpage__text-wrapper p {
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-button {
+.button {
   color: #fa9601;
   border-color: #fa9601;
   background-color: transparent;
   border: 4px solid #fa9601;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
-  height: 50px;
+  height: 40px;
   margin-top: 20px;
   outline: none;
-  transform: translateX(2000px);
-  margin-right: 30px;
+  width: 80%;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: black;
-  cursor: pointer;
+@media (min-width: 600px) {
+  .aboutpage__text-wrapper h3 {
+    font-size: 50px;
+  }
+  .aboutpage__text-wrapper p {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  .button {
+    height: 50px;
+    font-size: 20px;
+    width: 60%;
+  }
+  .aboutpage__content img {
+    width: 70%;
+    height: 330px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .aboutpage__content {
+    flex-direction: row;
+  }
+  /* @keyframes animations {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes animationss {
+    0% {
+      transform: translateX(-3000px);
+    }
+    70% {
+      transform: translateX(40px);
+    }
+    80% {
+      transform: translateX(-80px);
+    }
+    87% {
+      transform: translateX(10px);
+    }
+    94% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes animationsss {
+    0% {
+      transform: translateY(-1000px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes animation {
+    0% {
+      transform: translate(2000px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  } */
 }
