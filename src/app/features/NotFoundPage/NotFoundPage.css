@@ -1,0 +1,80 @@
+.notfoundpage {
+  background-image: linear-gradient(
+    135deg,
+    rgb(7, 6, 4) 0%,
+    rgb(49, 47, 47) 50%,
+    rgb(7, 6, 4) 89%
+  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.notfoundpage h1 {
+  font-size: 100px;
+  background: -webkit-linear-gradient(#fa9601, rgb(34, 33, 33));
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+}
+
+.notfoundpage button {
+  cursor: pointer;
+  color: #fa9601;
+  border-color: #fa9601;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+  outline: none;
+}
+@media (max-width: 1200px) {
+  .notfoundpage h1 {
+    font-size: 65px;
+  }
+  .notfoundpage button {
+    font-size: 22px;
+    height: 60px;
+  }
+}
+@media (max-width: 1000px) {
+  .notfoundpage h1 {
+    font-size: 55px;
+  }
+  .notfoundpage button {
+    font-size: 22px;
+    height: 55px;
+  }
+}
+@media (max-width: 800px) {
+  .notfoundpage h1 {
+    font-size: 45px;
+  }
+  .notfoundpage button {
+    font-size: 20px;
+    height: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .notfoundpage h1 {
+    font-size: 35px;
+  }
+  .notfoundpage button {
+    font-size: 15px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .notfoundpage h1 {
+    font-size: 25px;
+  }
+  .notfoundpage button {
+    font-size: 15px;
+    height: 35px;
+  }
+}

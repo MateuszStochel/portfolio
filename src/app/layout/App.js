@@ -15,6 +15,7 @@ import DrawerToggleButton from "../features/navigation/NavMobile/DrawerToggleBut
 import "./App.css";
 import Contact from "../features/contact/Contact";
 import MainPage from "../features/main/MainPage";
+import NotFoundPage from "../features/NotFoundPage/NotFoundPage";
 
 function App() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
@@ -43,6 +44,7 @@ function App() {
         <Route path="/skills" component={ProjectsPage} />
         <Route path="/projects" component={AboutPage} />
         <Route path="/contact" component={Contact} />
+        <Route path="" component={NotFoundPage} />
       </Switch>
     </>
   );

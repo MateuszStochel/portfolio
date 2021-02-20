@@ -1,6 +1,6 @@
 import React from "react";
 
-import InnerContainer from "../../../wrapper/InnerContainer";
+import InnerContainer from "../../common/wrapper/InnerContainer";
 
 import MainPageSVG from "./MainPageSVG";
 import uniqid from "uniqid";
