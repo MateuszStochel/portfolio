@@ -3,6 +3,7 @@ import React from "react";
 import InnerContainer from "../../../wrapper/InnerContainer";
 
 import MainPageSVG from "./MainPageSVG";
+import uniqid from "uniqid";
 import "./MainPage.css";
 
 const MainPage = () => {
@@ -22,7 +23,7 @@ const MainPage = () => {
           {spanTexts.map((text, i) => (
             <p
               className={`mainpage__text-animation mainpage__text-animation--${i}`}
-              key={i}
+              key={uniqid()}
             >
               {text}
             </p>

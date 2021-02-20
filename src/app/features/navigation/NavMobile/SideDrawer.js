@@ -4,6 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import clsx from "clsx";
 import "./SideDrawer.css";
 import { useDispatch } from "react-redux";
+import uniqid from "uniqid";
 import {
   asyncActionFinish,
   asyncActionStart,
@@ -31,8 +32,9 @@ const SideDrawer = ({ show, onShow, ...props }) => {
     { title: "contact", path: "/contact" },
   ];
 
-  const link = navigation.map((nav) => (
+  const link = navigation.map((nav, i) => (
     <li
+      key={uniqid()}
       className={clsx({ active: location.pathname === nav.path })}
       onClick={() => changeUrl(nav.path)}
     >

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import InnerContainer from "../../../wrapper/InnerContainer";
 
 import { db } from "../../firestore/firebase";
 

@@ -1,6 +1,7 @@
 import React from "react";
 
 import img0 from "../../../img/shop.png";
+import uniqid from "uniqid";
 
 import "./ProjectsPage.css";
 
@@ -14,7 +15,7 @@ Sequelize, Ant Design`,
     img: img0,
   },
   {
-    title: "shop",
+    title: "shops",
     content: `Search about upcoming artist's events and concerts in towns. You
 must be logged in to use all features available in projects. The
 project was created with React(hooks), Typescript, NodeJS,
@@ -24,7 +25,10 @@ Sequelize, Ant Design`,
 ];
 
 const projects = projectsContent.map((project, i) => (
-  <div className={`aboutpage__content aboutpage__content__animation-${i}`}>
+  <div
+    key={uniqid()}
+    className={`aboutpage__content aboutpage__content__animation-${i}`}
+  >
     <h2 className={`aboutpage__content__title-${i}`}>{project.title}</h2>
     <img
       className={`aboutpage__content__image-${i}`}

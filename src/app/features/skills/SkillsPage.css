@@ -38,14 +38,14 @@
   text-align: left;
   color: #fa9601;
   transform: translateX(-300%);
-  animation: animations 2s 1.5s forwards;
+  animation: animationrightside 2s 1.5s forwards;
 }
 
 .projectspage__technologies-wrapper li:nth-child(even) {
   text-align: right;
   color: white;
   transform: translateX(300%);
-  animation: animation 2s 2s forwards;
+  animation: animationleftside 2s 2s forwards;
 }
 .projectspage__technologies-wrapper li:nth-child(1) {
   animation-delay: 2.2s;
@@ -82,7 +82,7 @@
     ) repeat scroll 0 0;
 }
 
-@keyframes animation {
+@keyframes animationleftside {
   0% {
     transform: translateX(300%);
   }
@@ -97,7 +97,7 @@
   }
 }
 
-@keyframes animations {
+@keyframes animationrightside {
   0% {
     transform: translateX(-300%);
   }

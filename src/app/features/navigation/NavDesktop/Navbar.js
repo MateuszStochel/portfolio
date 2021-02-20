@@ -22,7 +22,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const setLoading = (e) => {
-    console.log(location.pathname);
     const path = e.currentTarget.getAttribute("to");
     if (location.pathname === path) return;
     dispatch(asyncActionStart());
