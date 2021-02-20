@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import { Route, Router, Switch } from "react-router";
+import { Route, Switch } from "react-router";
 
-import Loader from "./Loader";
-import MainPage from "./MainPage";
-import Navbar from "./Navbar";
-import Contact from "./Contact";
-import SideDrawer from "./SideDrawer";
-import Backdrop from "./Backdrop";
-import ProjectsPage from "./ProjectsPage";
+import Loader from "../common/loader/Loader";
+
+import Navbar from "../features/navigation/NavDesktop/Navbar";
+
+import SideDrawer from "../features/navigation/NavMobile/SideDrawer";
+import Backdrop from "../../Backdrop";
+import ProjectsPage from "../features/skills/SkillsPage";
+import AboutPage from "../features/projects/ProjectsPage";
+
+import DrawerToggleButton from "../features/navigation/NavMobile/DrawerToggleButton";
 
 import "./App.css";
-import AboutPage from "./AboutPage";
-import DrawerToggleButton from "./DrawerToggleButton";
+import Contact from "../features/contact/Contact";
+import MainPage from "../features/main/MainPage";
 
 function App() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
@@ -37,8 +40,8 @@ function App() {
 
       <Switch>
         <Route path="/" exact component={MainPage} />
-        <Route path="/projects" component={ProjectsPage} />
-        <Route path="/about" component={AboutPage} />
+        <Route path="/skills" component={ProjectsPage} />
+        <Route path="/projects" component={AboutPage} />
         <Route path="/contact" component={Contact} />
       </Switch>
     </>

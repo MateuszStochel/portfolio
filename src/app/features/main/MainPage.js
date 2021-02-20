@@ -1,8 +1,8 @@
 import React from "react";
 
-import MainPageSVG from "./MainPageSVG";
-import InnerContainer from "./wrapper/InnerContainer";
+import InnerContainer from "../../../wrapper/InnerContainer";
 
+import MainPageSVG from "./MainPageSVG";
 import "./MainPage.css";
 
 const MainPage = () => {

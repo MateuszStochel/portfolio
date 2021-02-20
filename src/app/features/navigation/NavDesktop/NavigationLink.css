@@ -14,6 +14,14 @@
   color: orange;
 }
 
+.active path {
+  stroke: orange;
+  fill: orange;
+}
+.active p {
+  color: orange !important;
+}
+
 .navigationlink svg {
   font-size: 30px;
 }

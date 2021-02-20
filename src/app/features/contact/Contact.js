@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import InnerContainer from "../../../wrapper/InnerContainer";
 
-import { db } from "./firebase";
+import { db } from "../../firestore/firebase";
 
 import "./Contact.css";
 

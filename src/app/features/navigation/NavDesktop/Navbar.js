@@ -6,11 +6,10 @@ import NavigationLink from "./NavigationLink";
 import {
   asyncActionFinish,
   asyncActionStart,
-} from "./store/action/asyncAction";
+} from "../../../store/action/asyncAction";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PersonIcon from "@material-ui/icons/Person";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import AirplayIcon from "@material-ui/icons/Airplay";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
 import DomainIcon from "@material-ui/icons/Domain";
@@ -37,15 +36,14 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar__links--wrapper">
         <NavigationLink
-          name="Main"
+          name="main"
           loading={setLoading}
           icon={<DomainIcon />}
-          icon2={<SyncAltIcon />}
           pathname="/"
         />
         <NavigationLink
-          name="about"
-          pathname="/about"
+          name="skills"
+          pathname="/skills"
           loading={setLoading}
           icon={<PersonIcon />}
         />

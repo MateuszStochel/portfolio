@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 
-import "../MainPage.css";
+import "./InnerContainer.css";
 
 const InnerContainer = ({ children }) => {
   const { loading } = useSelector((state) => state.async);
